@@ -1003,6 +1003,54 @@
             background: #FFFDF8;
         }
 
+        /* Khung hình ảnh báo cáo đẹp mắt */
+        .report-image-figure {
+            margin: 20px auto;
+            text-align: center;
+            max-width: 100%;
+        }
+        .report-image-figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+            border: 2px solid var(--border-glass);
+            transition: transform 0.3s;
+        }
+        .report-image-figure img:hover {
+            transform: scale(1.01);
+        }
+        .report-image-caption {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 8px;
+            font-style: italic;
+            line-height: 1.5;
+        }
+
+        /* Nút Xem báo cáo chi tiết trong modal */
+        .btn-modal-report {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, var(--color-blue-dark), #87CEFA);
+            color: #fff !important;
+            text-decoration: none;
+            padding: 10px 24px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 14px;
+            box-shadow: 0 4px 12px rgba(108, 166, 205, 0.3);
+            transition: all 0.2s ease;
+            margin: 15px 0;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-modal-report:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(108, 166, 205, 0.5);
+        }
+
         /* --- CSS Animation Keyframes --- */
         @keyframes spin {
             from { transform: rotate(0deg); }
@@ -1147,7 +1195,7 @@
             <!-- Bài 1 -->
             <div class="project-card" onclick="openProject(1)">
                 <div>
-                    <span class="proj-num pink">Bài 1 • 1.4 Thao tác cơ bản với tệp tin và thư mục</span>
+                    <span class="proj-num pink">Bài 1 • Thao tác cơ bản với tệp tin và thư mục</span>
                     <h3 class="proj-title">Thao tác cơ bản với tệp tin và thư mục</h3>
                     <p class="proj-excerpt">Xây dựng trật tự gọn gàng cho không gian học tập số thông qua 12 bước phân cấp tài liệu khoa học trên macOS.</p>
                 </div>
@@ -1163,7 +1211,7 @@
             <!-- Bài 2 -->
             <div class="project-card" onclick="openProject(2)">
                 <div>
-                    <span class="proj-num blue">Bài 2 • 2.4 Tìm kiếm và đánh giá thông tin học thuật</span>
+                    <span class="proj-num blue">Bài 2 • Tìm kiếm và đánh giá thông tin học thuật</span>
                     <h3 class="proj-title">Tìm kiếm và đánh giá thông tin học thuật</h3>
                     <p class="proj-excerpt">Đánh giá khách quan độ tin cậy của 10 nghiên cứu khoa học giảng dạy ngoại ngữ theo 5 bộ tiêu chuẩn cốt lõi.</p>
                 </div>
@@ -1179,7 +1227,7 @@
             <!-- Bài 3 -->
             <div class="project-card" onclick="openProject(3)">
                 <div>
-                    <span class="proj-num green">Bài 3 • 3.4 Viết Prompt hiệu quả cho các tác vụ học tập</span>
+                    <span class="proj-num green">Bài 3 • Viết Prompt hiệu quả cho các tác vụ học tập</span>
                     <h3 class="proj-title">Viết Prompt hiệu quả cho các tác vụ học tập</h3>
                     <p class="proj-excerpt">Chuỗi trải nghiệm chuyển hóa ngôn ngữ từ sơ khai đến tối ưu hóa qua các bộ cấu trúc Role, CoT và Analogies.</p>
                 </div>
@@ -1195,7 +1243,7 @@
             <!-- Bài 4 -->
             <div class="project-card" onclick="openProject(4)">
                 <div>
-                    <span class="proj-num yellow">Bài 4 • 4.4 Sử dụng công cụ cộng tác trực tuyến cho dự án nhóm</span>
+                    <span class="proj-num yellow">Bài 4 • Sử dụng công cụ cộng tác trực tuyến cho dự án nhóm</span>
                     <h3 class="proj-title">Sử dụng công cụ cộng tác trực tuyến cho dự án nhóm</h3>
                     <p class="proj-excerpt">Lãnh đạo và gắn kết nhóm thông qua sự tích hợp nhịp nhàng giữa Google Meet, ClickUp và Google Docs.</p>
                 </div>
@@ -1211,7 +1259,7 @@
             <!-- Bài 5 -->
             <div class="project-card" onclick="openProject(5)">
                 <div>
-                    <span class="proj-num pink">Bài 5 • 5.4 Sử dụng AI tạo sinh để hỗ trợ sáng tạo nội dung</span>
+                    <span class="proj-num pink">Bài 5 • Sử dụng AI tạo sinh để hỗ trợ sáng tạo nội dung</span>
                     <h3 class="proj-title">Sử dụng AI tạo sinh để hỗ trợ sáng tạo nội dung</h3>
                     <p class="proj-excerpt">Đồng hành cùng Trí tuệ nhân tạo để viết blog, tạo tranh và xây dựng ấn phẩm truyền thông mang tính thời đại.</p>
                 </div>
@@ -1227,7 +1275,7 @@
             <!-- Bài 6 -->
             <div class="project-card" onclick="openProject(6)">
                 <div>
-                    <span class="proj-num blue">Bài 6 • 6.4 Sử dụng AI có trách nhiệm trong học tập và nghiên cứu</span>
+                    <span class="proj-num blue">Bài 6 • Sử dụng AI có trách nhiệm trong học tập và nghiên cứu</span>
                     <h3 class="proj-title">Sử dụng AI có trách nhiệm trong học tập và nghiên cứu</h3>
                     <p class="proj-excerpt">Phân tích ranh giới liêm chính tại ULIS và lập ra bộ 6 nguyên tắc vàng hướng đạo bản thân trong kỷ nguyên số.</p>
                 </div>
@@ -1281,7 +1329,7 @@
                     <h4>🎓 Bài học Sư phạm Vàng (Pedagogical Lessons)</h4>
                     <ul>
                         <li><strong>Nguyên tắc "Human-in-the-Loop":</strong> AI chỉ là một cộng sự, một chiếc Co-pilot cần mẫn hỗ trợ tìm kiếm cấu trúc. Giá trị cốt lõi, chiều sâu cảm xúc và tính nhân văn của sản phẩm cuối cùng luôn nằm ở tư duy phản biện và sự gọt giũa tỉ mỉ của con người (như cách mình tự viết lại bài viết FOMO ở Bài tập 5).</li>
-                        <li><strong>Định hình phương pháp sư phạm tương lai:</strong> Học phần này đã tái định nghĩa lại cách mình nhìn nhận một lớp học tiếng Anh. Công nghệ số giúp người giáo viên tương lai biến những bài học ngữ pháp khô khan thành các chuỗi hoạt động sáng tạo nội dung đa phương tiện, các blog tâm lý sinh động và bộ đề kiểm tra phân hóa khoa học.</li>
+                        <li><strong>Định hình phương pháp sư phạm tương lai:</strong> Học phần này đã tái định nghĩa lại cách mình nhìn nhận một lớp học tiếng Anh. Công nghệ số giúp người giáo viên tương lai biến những bài học ngữ pháp khô khan thành các chuỗi hoạt động sáng tạo nội dung đa phương tiện, các blog tâm lý sinh động và bộ đề kiểm tra phân hóa khoa học cho học trò.</li>
                         <li><strong>Bản lĩnh số và Liêm chính học thuật:</strong> Trở thành một công dân số thông thái không chỉ là dùng công cụ giỏi, mà là biết dùng công cụ một cách đạo đức. Bộ 6 nguyên tắc liêm chính mình tự xây dựng ở Bài tập 6 chính là chiếc la bàn đạo đức giúp mình luôn làm chủ công nghệ thay vì để công nghệ lười hóa tư duy độc lập của mình.</li>
                     </ul>
                 </div>
@@ -1405,7 +1453,7 @@
         // --- 2. Hệ thống tải dữ liệu bài viết độc quyền của sinh viên ---
         const projectData = {
             1: {
-                num: "Bài 1 • 1.4 Thao tác cơ bản với tệp tin và thư mục",
+                num: "Bài 1 • Thao tác cơ bản với tệp tin và thư mục",
                 title: "Thao tác cơ bản với tệp tin và thư mục",
                 body: `
                     <div class="meta-card-container">
@@ -1418,6 +1466,8 @@
                             <p>Sự kỷ luật trong dọn dẹp không gian lưu trữ số giúp giảm tải áp lực tinh thần và nâng cao tốc độ tìm kiếm tài nguyên học tập tới 200%.</p>
                         </div>
                     </div>
+
+                    <a class="btn-modal-report" href="https://drive.google.com/file/d/12dLp5O-hkQbctGz-IOEtzMo5Gh9xIpNZ/view?usp=sharing" target="_blank">📄 Xem báo cáo chi tiết</a>
 
                     <h4>📂 Sơ đồ cây thư mục thực tế của dự án:</h4>
                     <div class="folder-tree">
@@ -1447,10 +1497,40 @@
                             <li style="margin-bottom: 8px;"><strong>Bước 12 (Xử lý dọn rác):</strong> Nhấn và giữ tệp <code>DiChuyen.txt</code>, rê chuột di chuyển kéo xuống góc dưới cùng bên phải màn hình để thả vào Thùng rác (Trash) hệ thống, dọn dẹp sạch sẽ không gian số.</li>
                         </ol>
                     </div>
+
+                    <h4 style="margin-top: 25px;">📸 Minh chứng quy trình thực hiện (Trình bày xuôi dòng):</h4>
+                    <div class="report-image-figure">
+                        <img src="b11.jpg" alt="Minh chứng bước 1">
+                        <p class="report-image-caption">Hình 1.1: Khởi tạo thư mục học tập mới thông qua Finder</p>
+                    </div>
+                    <div class="report-image-figure">
+                        <img src="b12.jpg" alt="Minh chứng bước 2">
+                        <p class="report-image-caption">Hình 1.2: Đặt tên thư mục làm việc chuẩn hoá Thuchanh_DaoHuyenTrang</p>
+                    </div>
+                    <div class="report-image-figure">
+                        <img src="b13.jpg" alt="Minh chứng bước 3">
+                        <p class="report-image-caption">Hình 1.3: Tạo tệp tài liệu plain-text nháp GhiChu.txt</p>
+                    </div>
+                    <div class="report-image-figure">
+                        <img src="b14.jpg" alt="Minh chứng bước 4">
+                        <p class="report-image-caption">Hình 1.4: Thao tác đổi tên nhanh sang GhiChuQuanTrong.txt</p>
+                    </div>
+                    <div class="report-image-figure">
+                        <img src="b15.jpg" alt="Minh chứng bước 5">
+                        <p class="report-image-caption">Hình 1.5: Sao chép tệp văn bản bằng Command+C và dán bằng Command+V</p>
+                    </div>
+                    <div class="report-image-figure">
+                        <img src="b16.jpg" alt="Minh chứng bước 6">
+                        <p class="report-image-caption">Hình 1.6: Tạo tệp tin phụ DiChuyen nhằm phân định dữ liệu</p>
+                    </div>
+                    <div class="report-image-figure">
+                        <img src="b17.jpg" alt="Minh chứng bước 7">
+                        <p class="report-image-caption">Hình 1.7: Thực hành dọn dẹp dữ liệu thừa vào Trash hệ thống để giải phóng tài nguyên</p>
+                    </div>
                 `
             },
             2: {
-                num: "Bài 2 • 2.4 Tìm kiếm và đánh giá thông tin học thuật",
+                num: "Bài 2 • Tìm kiếm và đánh giá thông tin học thuật",
                 title: "Tìm kiếm và đánh giá thông tin học thuật",
                 body: `
                     <div class="meta-card-container">
@@ -1464,104 +1544,106 @@
                         </div>
                     </div>
 
-                    <h4>🔍 Trình khám phá 10 nguồn tài liệu tiếng Anh (ELT) đã qua thẩm định:</h4>
-                    <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 15px;">Dưới đây là bảng đánh giá sâu sắc của Đào Huyền Trang đối với 10 tài nguyên nghiên cứu hàng đầu:</p>
+                    <a class="btn-modal-report" href="https://drive.google.com/file/d/1pimZVNBtGG1JBlJLVynnxO_7g2RD3CBt/view?usp=share_link" target="_blank">📄 Xem báo cáo chi tiết</a>
+
+                    <h4>🔍 Trình duyệt trực quan 10 nguồn tài liệu học thuật giảng dạy tiếng Anh (ELT) đã qua thẩm định:</h4>
+                    <p style="font-size: 13.5px; color: var(--text-muted); margin-bottom: 20px;">Dưới đây là báo cáo đánh giá chuyên sâu hiển thị xuôi dòng đầy đủ của Đào Huyền Trang:</p>
                     
-                    <div class="source-grid">
-                        <div class="source-card-interactive">
+                    <div style="display: flex; flex-direction: column; gap: 20px;">
+                        <div style="background: #fff; border: 1.5px solid #e1e8ed; border-radius: 20px; padding: 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.02);">
                             <span class="source-criteria-badge" style="background: var(--color-pink);">1. ScienceDirect</span>
-                            <h5>A review of innovative teaching methods</h5>
+                            <h5 style="margin-bottom: 5px;">A review of innovative teaching methods</h5>
                             <p class="citation">Sivarajah, R.T., Curci, N.E., Johnson, E.M., Lam, D.L., Lee, J.T. and Richardson, M.L. (2019)</p>
-                            <div class="source-commentary">
-                                <strong>Đánh giá của Trang:</strong> Tài liệu có độ tin cậy tuyệt đối nhờ được kiểm duyệt nghiêm ngặt qua ScienceDirect. Phân tích rất sâu các xu hướng học tập chủ động (active learning). Rất có giá trị để tham chiếu lý thuyết.
-                            </div>
+                            <p style="font-size: 13.5px; color: #555; border-top: 1px dashed #ddd; padding-top: 12px; margin-top: 12px;">
+                                <strong>Đánh giá của Trang:</strong> Tài liệu này có độ tin cậy tuyệt đối nhờ được bình duyệt nghiêm ngặt và xuất bản trên hệ thống ScienceDirect uy tín. Nghiên cứu tập trung khai thác sâu sắc các mô hình active learning (học tập chủ động) trong kỷ nguyên mới. Cực kỳ có giá trị tham chiếu để Trang định hình cấu trúc bài giảng ngoại ngữ.
+                            </p>
                         </div>
 
-                        <div class="source-card-interactive">
-                            <span class="source-criteria-badge" style="background: var(--color-yellow);">2. Book</span>
-                            <h5>What teachers need to know about teaching methods</h5>
+                        <div style="background: #fff; border: 1.5px solid #e1e8ed; border-radius: 20px; padding: 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.02);">
+                            <span class="source-criteria-badge" style="background: var(--color-yellow);">2. Sách chuyên môn</span>
+                            <h5 style="margin-bottom: 5px;">What teachers need to know about teaching methods</h5>
                             <p class="citation">Westwood, P.S. (2008). Camberwell: ACER Press.</p>
-                            <div class="source-commentary">
-                                <strong>Đánh giá của Trang:</strong> Sách của chuyên gia uy tín, nhà xuất bản danh giá ACER Press. Cung cấp nền tảng lý thuyết sư phạm cực kỳ vững chắc, tuy nhiên có phần lỗi thời vì thiếu vắng các phương thức giảng dạy tích hợp AI hiện đại.
-                            </div>
+                            <p style="font-size: 13.5px; color: #555; border-top: 1px dashed #ddd; padding-top: 12px; margin-top: 12px;">
+                                <strong>Đánh giá của Trang:</strong> Được phát hành bởi nhà xuất bản giáo dục học thuật danh giá ACER Press. Sách cung cấp hệ thống lý thuyết sư phạm cực kỳ chặt chẽ, hệ thống hóa chi tiết mọi kỹ thuật đứng lớp. Hạn chế duy nhất là tính cập nhật công nghệ thời đại số có phần chưa đầy đủ do khoảng cách thời gian xuất bản.
+                            </p>
                         </div>
 
-                        <div class="source-card-interactive">
+                        <div style="background: #fff; border: 1.5px solid #e1e8ed; border-radius: 20px; padding: 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.02);">
                             <span class="source-criteria-badge" style="background: var(--color-blue);">3. Case Study</span>
-                            <h5>Teaching in Saudi Arabia: Prospects and challenges</h5>
+                            <h5 style="margin-bottom: 5px;">Teaching in Saudi Arabia: Prospects and challenges</h5>
                             <p class="citation">Rahman, M.M.U. and Alhaisoni, E. (2013)</p>
-                            <div class="source-commentary">
-                                <strong>Đánh giá của Trang:</strong> Nghiên cứu trường hợp cụ thể cung cấp bức tranh thực tế về các rào cản và cơ hội cải cách giáo dục tại vùng Trung Đông. Cần lưu ý khi áp dụng vì sự khác biệt văn hóa lớn.
-                            </div>
+                            <p style="font-size: 13.5px; color: #555; border-top: 1px dashed #ddd; padding-top: 12px; margin-top: 12px;">
+                                <strong>Đánh giá của Trang:</strong> Đem lại góc nhìn thực tế rất sâu sắc về các rào cản hành chính, văn hóa và động lực học tập của người học tại Ả Rập Xê Út. Cung cấp bài học thực tiễn giá trị về phương án cải tiến chất lượng dạy học ở các nước châu Á, tuy nhiên cần lưu ý ranh giới khác biệt văn hóa lớn khi áp dụng ở nước ta.
+                            </p>
                         </div>
 
-                        <div class="source-card-interactive">
-                            <span class="source-criteria-badge" style="background: var(--color-green);">4. Philosophical</span>
-                            <h5>What is teaching?</h5>
+                        <div style="background: #fff; border: 1.5px solid #e1e8ed; border-radius: 20px; padding: 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.02);">
+                            <span class="source-criteria-badge" style="background: var(--color-green);">4. Foundations</span>
+                            <h5 style="margin-bottom: 5px;">What is teaching?</h5>
                             <p class="citation">Hirst, P.H. (1971). Journal of Curriculum Studies, 3(1), pp. 5–18.</p>
-                            <div class="source-commentary">
-                                <strong>Đánh giá của Trang:</strong> Tài liệu triết học kinh điển, đặt nền móng cho định nghĩa "giảng dạy" trong hệ thống sư phạm thế giới. Hạn chế là tính cập nhật bằng không vì đã xuất bản cách đây hơn nửa thế kỷ.
-                            </div>
+                            <p style="font-size: 13.5px; color: #555; border-top: 1px dashed #ddd; padding-top: 12px; margin-top: 12px;">
+                                <strong>Đánh giá của Trang:</strong> Một công trình nghiên cứu triết học kinh điển, giúp thiết lập định nghĩa học thuật chính thống nhất về "giảng dạy" trong lý luận sư phạm. Hạn chế là tính cập nhật kém do bài báo xuất bản từ thế kỷ trước, hoàn toàn thiếu đi các bối cảnh tích hợp công nghệ giảng dạy hiện đại.
+                            </p>
                         </div>
 
-                        <div class="source-card-interactive">
+                        <div style="background: #fff; border: 1.5px solid #e1e8ed; border-radius: 20px; padding: 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.02);">
                             <span class="source-criteria-badge" style="background: var(--color-pink);">5. AI Pedagogy</span>
-                            <h5>AI and English teaching: Affordances and challenges</h5>
+                            <h5 style="margin-bottom: 5px;">AI and English teaching: Affordances and challenges</h5>
                             <p class="citation">Author Unknown (2023). British Journal of Educational Technology.</p>
-                            <div class="source-commentary">
-                                <strong>Đánh giá của Trang:</strong> Điểm tuyệt đối về tính cập nhật và thực tiễn. Nghiên cứu khai thác trực diện cơ hội và thách thức của AI trong lớp học ngoại ngữ hiện đại. Rất có giá trị để Trang ứng dụng vào phương pháp luận giảng dạy.
-                            </div>
+                            <p style="font-size: 13.5px; color: #555; border-top: 1px dashed #ddd; padding-top: 12px; margin-top: 12px;">
+                                <strong>Đánh giá của Trang:</strong> Đạt điểm tối đa về tính cập nhật và giá trị thực tế. Tài liệu được đăng trên tạp chí BJET danh giá, phân tích đa chiều về những cơ hội bứt phá và rủi ro đạo đức khi đưa AI vào thiết kế bài giảng tiếng Anh. Là tài liệu gối đầu giường giúp Trang định hình đạo đức sử dụng AI (Bài tập 6).
+                            </p>
                         </div>
 
-                        <div class="source-card-interactive">
+                        <div style="background: #fff; border: 1.5px solid #e1e8ed; border-radius: 20px; padding: 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.02);">
                             <span class="source-criteria-badge" style="background: var(--color-yellow);">6. Regional</span>
-                            <h5>English language teaching in China: A bridge to the future</h5>
+                            <h5 style="margin-bottom: 5px;">English language teaching in China: A bridge to the future</h5>
                             <p class="citation">Jin, L. and Cortazzi, M. (2002). Asia Pacific Journal of Education.</p>
-                            <div class="source-commentary">
-                                <strong>Đánh giá của Trang:</strong> Nghiên cứu có hệ thống về sự chuyển mình của hệ thống giáo dục tiếng Anh tại Trung Quốc. Tuy nhiên, nội dung chưa cập nhật các yếu tố tích hợp công nghệ giảng dạy của những năm gần đây.
-                            </div>
+                            <p style="font-size: 13.5px; color: #555; border-top: 1px dashed #ddd; padding-top: 12px; margin-top: 12px;">
+                                <strong>Đánh giá của Trang:</strong> Đóng vai trò là nhịp cầu lý thuyết quan trọng giúp tìm hiểu sâu sắc về sự phát triển của hệ thống giáo dục ngoại ngữ tại một nước láng giềng châu Á. Điểm trừ duy nhất là thiếu vắng các tham chiếu về yếu tố số hóa lớp học những năm gần đây.
+                            </p>
                         </div>
 
-                        <div class="source-card-interactive">
+                        <div style="background: #fff; border: 1.5px solid #e1e8ed; border-radius: 20px; padding: 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.02);">
                             <span class="source-criteria-badge" style="background: var(--color-blue);">7. Qualitative</span>
                             <h5>Black teachers of English in South Korea</h5>
                             <p class="citation">Charles, Q.D. (2019). TESOL Journal.</p>
-                            <div class="source-commentary">
-                                <strong>Đánh giá của Trang:</strong> Đăng tải trên tạp chí TESOL Journal danh giá. Khai thác sâu khía cạnh xã hội, tâm lý và bản sắc cá nhân của giáo viên bản ngữ da màu trong môi trường giáo dục châu Á. Rất giàu tính nhân văn.
-                            </div>
+                            <p style="font-size: 13.5px; color: #555; border-top: 1px dashed #ddd; padding-top: 12px; margin-top: 12px;">
+                                <strong>Đánh giá của Trang:</strong> Công trình đạt điểm xuất sắc về mặt lý luận văn hóa xã hội trên tạp chí TESOL Journal. Khai thác rất chân thực đời sống tinh thần, những định kiến xã hội và bản sắc nghề nghiệp của giáo viên bản ngữ da màu trong môi trường giáo dục châu Á. Rất giàu tính nhân văn.
+                            </p>
                         </div>
 
-                        <div class="source-card-interactive">
+                        <div style="background: #fff; border: 1.5px solid #e1e8ed; border-radius: 20px; padding: 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.02);">
                             <span class="source-criteria-badge" style="background: var(--color-green);">8. Reflection</span>
                             <h5>English language teachers reflecting on reflections: A Malaysian experience</h5>
                             <p class="citation">Kabilan, M.K. (2007). TESOL Quarterly.</p>
-                            <div class="source-commentary">
-                                <strong>Đánh giá của Trang:</strong> Nghiên cứu sâu sắc về quá trình tự phản phản tư của giáo viên tiếng Anh tại Malaysia. Mang lại bài học sư phạm đắt giá giúp các nhà giáo tương lai tự cải tiến năng lực liên tục.
-                            </div>
+                            <p style="font-size: 13.5px; color: #555; border-top: 1px dashed #ddd; padding-top: 12px; margin-top: 12px;">
+                                <strong>Đánh giá của Trang:</strong> Đăng trên tạp chí sư phạm danh tiếng thế giới TESOL Quarterly. Nghiên cứu mổ xẻ cơ chế tự đánh giá, phản tư của giáo viên tiếng Anh tại Malaysia. Cung cấp bài học thực tiễn giúp Trang hình thành tư duy phản tư liên tục hằng ngày.
+                            </p>
                         </div>
 
-                        <div class="source-card-interactive">
+                        <div style="background: #fff; border: 1.5px solid #e1e8ed; border-radius: 20px; padding: 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.02);">
                             <span class="source-criteria-badge" style="background: var(--color-pink);">9. Web Article</span>
                             <h5>Student engagement, factors, and methods affecting active learning [Web]</h5>
-                            <p class="citation">Ginting, D. (2021). VELES: Voices of English Language Education Society.</p>
-                            <div class="source-commentary">
-                                <strong>Đánh giá của Trang:</strong> Phân tích tốt các yếu tố tác động đến động lực của học viên. Hạn chế là đường dẫn web có nguy cơ bị lỗi liên kết hỏng sau thời gian dài lưu trữ trực tuyến.
-                            </div>
+                            <p class="citation">Ginting, D. (2021). VELES Journal.</p>
+                            <p style="font-size: 13.5px; color: #555; border-top: 1px dashed #ddd; padding-top: 12px; margin-top: 12px;">
+                                <strong>Đánh giá của Trang:</strong> Công trình phân tích thực tế sinh động các yếu tố tác động trực tiếp đến động lực của học viên ngoại ngữ. Hạn chế là đường dẫn web thông thường có rủi ro cao bị đứt gãy liên kết sau vài năm xuất bản.
+                            </p>
                         </div>
 
-                        <div class="source-card-interactive">
+                        <div style="background: #fff; border: 1.5px solid #e1e8ed; border-radius: 20px; padding: 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.02);">
                             <span class="source-criteria-badge" style="background: var(--color-yellow);">10. Persistent</span>
                             <h5>Student engagement, factors, and methods affecting active learning [DOI]</h5>
-                            <p class="citation">Ginting, D. (2021). VELES: Voices of English Language Education Society.</p>
-                            <div class="source-commentary">
-                                <strong>Đánh giá của Trang:</strong> Phiên bản cải tiến học thuật hoàn hảo của nguồn số 9 nhờ tích hợp mã định danh liên kết số DOI cố định, bảo đảm thông tin khoa học được lưu giữ và tham chiếu bền vững trên Internet.
-                            </div>
+                            <p class="citation">Ginting, D. (2021). VELES Journal.</p>
+                            <p style="font-size: 13.5px; color: #555; border-top: 1px dashed #ddd; padding-top: 12px; margin-top: 12px;">
+                                <strong>Đánh giá của Trang:</strong> Phiên bản cải tiến học thuật hoàn hảo của nguồn số 9 nhờ tích hợp mã liên kết số định danh kỹ thuật số DOI ổn định vĩnh viễn trên Internet, bảo đảm thông tin khoa học được lưu giữ và tham chiếu dễ dàng và uy tín.
+                            </p>
                         </div>
                     </div>
                 `
             },
             3: {
-                num: "Bài 3 • 3.4 Viết Prompt hiệu quả cho các tác vụ học tập",
+                num: "Bài 3 • Viết Prompt hiệu quả cho các tác vụ học tập",
                 title: "Viết Prompt hiệu quả cho các tác vụ học tập",
                 body: `
                     <div class="meta-card-container">
@@ -1574,6 +1656,8 @@
                             <p>Muốn nhận được câu trả lời chất lượng cao, ta phải gán vai trò rõ ràng, đưa bối cảnh hẹp, ràng buộc cấu trúc đầu ra chặt chẽ và hướng dẫn quy trình tư duy.</p>
                         </div>
                     </div>
+
+                    <a class="btn-modal-report" href="https://drive.google.com/file/d/1MBKBsKKxQX43F4ylTXiXGZQ3ay5lNAQN/view?usp=share_link" target="_blank">📄 Xem báo cáo chi tiết</a>
 
                     <h4>💻 Chuỗi thực hành nâng cấp Prompt cho 3 tác vụ học tập quan trọng:</h4>
                     <div class="prompt-interactive-box">
@@ -1633,10 +1717,24 @@
                             </tr>
                         </tbody>
                     </table>
+
+                    <h4 style="margin-top: 25px;">📸 Hình ảnh hoạt động thực hành từ báo cáo:</h4>
+                    <div class="report-image-figure">
+                        <img src="b31.jpg" alt="Minh chứng báo cáo prompt 1">
+                        <p class="report-image-caption">Hình 3.1: Minh chứng kết quả thực hành Prompt tóm tắt tài liệu khoa học trên ChatGPT</p>
+                    </div>
+                    <div class="report-image-figure">
+                        <img src="b32.jpg" alt="Minh chứng báo cáo prompt 2">
+                        <p class="report-image-caption">Hình 3.2: Minh chứng thực hành Prompt cải tiến tóm tắt nội dung AI trong giáo dục</p>
+                    </div>
+                    <div class="report-image-figure">
+                        <img src="b33.jpg" alt="Minh chứng báo cáo prompt 3">
+                        <p class="report-image-caption">Hình 3.3: Minh chứng thực hành Prompt nâng cao, phân hóa cấu trúc luận điểm khoa học</p>
+                    </div>
                 `
             },
             4: {
-                num: "Bài 4 • 4.4 Sử dụng công cụ cộng tác trực tuyến cho dự án nhóm",
+                num: "Bài 4 • Sử dụng công cụ cộng tác trực tuyến cho dự án nhóm",
                 title: "Sử dụng công cụ cộng tác trực tuyến cho dự án nhóm",
                 body: `
                     <div class="meta-card-container">
@@ -1649,6 +1747,8 @@
                             <p>Lãnh đạo nhóm thời đại mới là tạo ra một môi trường làm việc số minh bạch, nơi mà tiến độ, thời hạn và trách nhiệm của mỗi cá nhân luôn hiển thị rõ nét.</p>
                         </div>
                     </div>
+
+                    <a class="btn-modal-report" href="https://drive.google.com/file/d/1D7Vs1eWphkmIlt2jPPaqIH-SVDxYGRde/view?usp=share_link" target="_blank">📄 Xem báo cáo chi tiết</a>
 
                     <h4>📊 Trực quan bảng theo dõi tiến độ công việc trên ClickUp (Kanban Board):</h4>
                     <div class="kanban-board">
@@ -1710,10 +1810,28 @@
                         <li><strong>Bất đồng quan điểm khoa học:</strong> Sự khác biệt khi phân tích yếu tố văn hoá. <em>→ Giải pháp: Tổ chức bỏ phiếu dân chủ trực tiếp trên Google Meet dựa trên tinh thần lắng nghe tích cực và tôn trọng đa số.</em></li>
                         <li><strong>Lệch văn phong báo cáo:</strong> Bài tập lớn bị ghép nối chắp vá. <em>→ Giải pháp: Thiết lập quy chuẩn định dạng (font, size, style) trên Google Docs ngay từ đầu, sau đó Trang trực tiếp đóng vai trò biên tập tổng duyệt cuối cùng.</em></li>
                     </ul>
+
+                    <h4 style="margin-top: 25px;">📸 Hình ảnh minh chứng thực tế từ báo cáo nhóm:</h4>
+                    <div class="report-image-figure">
+                        <img src="b41.jpg" alt="Minh chứng ClickUp nhóm">
+                        <p class="report-image-caption">Hình 4.1: Workspace ClickUp của nhóm do Trang khởi tạo để theo dõi deadline các đầu việc</p>
+                    </div>
+                    <div class="report-image-figure">
+                        <img src="b42.jpg" alt="Minh chứng họp Google Meet">
+                        <p class="report-image-caption">Hình 4.2: Biên bản và hình ảnh họp trực tuyến đều đặn trên Google Meet</p>
+                    </div>
+                    <div class="report-image-figure">
+                        <img src="b43.jpg" alt="Minh chứng cộng tác Google Docs">
+                        <p class="report-image-caption">Hình 4.3: Không gian biên tập báo cáo chi tiết về múa rối nước đồng soạn thảo trên Google Docs</p>
+                    </div>
+                    <div class="report-image-figure">
+                        <img src="b44.jpg" alt="Minh chứng phân công công việc">
+                        <p class="report-image-caption">Hình 4.4: Bảng ClickUp hiển thị trạng thái hoàn thành tiến độ xuất sắc của từng thành viên</p>
+                    </div>
                 `
             },
             5: {
-                num: "Bài 5 • 5.4 Sử dụng AI tạo sinh để hỗ trợ sáng tạo nội dung",
+                num: "Bài 5 • Sử dụng AI tạo sinh để hỗ trợ sáng tạo nội dung",
                 title: "Sử dụng AI tạo sinh để hỗ trợ sáng tạo nội dung",
                 body: `
                     <div class="meta-card-container">
@@ -1727,16 +1845,18 @@
                         </div>
                     </div>
 
+                    <a class="btn-modal-report" href="https://drive.google.com/file/d/1kWS2g0KoBlhB0vhoFvhN8FjZNkMBrBCO/view?usp=share_link" target="_blank">📄 Xem báo cáo chi tiết</a>
+
                     <h4>🎨 Trình tự sử dụng công cụ AI trong sáng tạo nội dung:</h4>
                     <ul style="padding-left: 20px; font-size: 13.5px; line-height: 1.8;">
                         <li><strong>Bước 1 - Tạo văn bản (ChatGPT):</strong> Sử dụng prompt chi tiết: <code>"Tôi muốn viết một bài blog về chủ đề 'Hiệu ứng FOMO của giới trẻ trên mạng xã hội'. Hãy lập một dàn ý chi tiết gồm: Mở bài, 3 phần thân bài (Biểu hiện, Hệ lụy, Giải pháp), và Kết bài."</code></li>
                         <li><strong>Bước 2 - Sáng tạo hình ảnh (Gemini/ImageFX):</strong> Đặt câu lệnh minh họa tâm lý: <code>"Tạo một bức ảnh minh họa sự cô đơn/lo lắng của một người khi nhìn vào điện thoại. Ánh sáng u buồn ám lên gương mặt, căn phòng u ám, chi tiết chỉn chu."</code> để tạo bức ảnh độ nét cao lột tả chân thực trạng thái của Gen Z.</li>
-                        <li><strong>Bước 3 - Thiết kế ấn phẩm (Canva AI):</strong> Đặt lệnh bố cục thông minh: <code>"Thiết kế banner bài viết về hội chứng FOMO mạng xã hội, phong cách tối giản, tông màu trầm."</code> thu về gợi ý dải màu u sầu phù hợp với chủ đề bài học.</li>
+                        <li><strong>Bước 3 - Thiết kế ấn phẩm (Canva AI):</strong> Đặt lệnh bối cảnh thông minh: <code>"Thiết kế banner bài viết về hội chứng FOMO mạng xã hội, phong cách tối giản, tông màu trầm."</code> thu về gợi ý dải màu u sầu phù hợp với chủ đề bài học.</li>
                     </ul>
 
                     <h4>✍️ Tác phẩm Blog hoàn chỉnh sau khi Trang tinh chỉnh và lồng ghép cảm xúc cá nhân:</h4>
                     <div style="background: #fff; border: 1.5px solid var(--color-pink-dark); padding: 20px; border-radius: 20px; margin-top: 15px; font-size: 13.5px; line-height: 1.8;">
-                        <h5 style="color: var(--color-pink-dark); margin-bottom: 10px; font-size: 16px;">Giải pháp vượt qua FOMO: Học cách sống theo nhịp của chính mình</h5>
+                        <h5 style="color: var(--color-pink-dark); margin-bottom: 10px; font-size: 16px;">Giải pháp vượt qua FOMO: Sống chủ động trong thế giới thực</h5>
                         <p style="margin-bottom: 12px;"><strong>FOMO (Fear Of Missing Out)</strong> không phải là điều gì quá xa lạ với giới trẻ ngày nay. Chỉ cần vài phút lướt mạng xã hội, chúng ta có thể thấy bạn bè đi du lịch, đạt thành tích mới hay sở hữu những món đồ đang là xu hướng. Tuy nhiên, điều quan trọng cần nhớ là mạng xã hội chỉ phản ánh một phần rất nhỏ của cuộc sống. Hầu hết mọi người đều có xu hướng chia sẻ những khoảnh khắc đẹp nhất, chứ không đăng tải những áp lực, thất bại hay khó khăn phía sau. Vì vậy, đừng vội cho rằng cuộc sống của người khác luôn hoàn hảo hơn mình.</p>
                         <p style="margin-bottom: 12px;"><strong>Một cách hiệu quả để giảm FOMO là giới hạn thời gian sử dụng mạng xã hội.</strong> Thay vì mở điện thoại mỗi khi rảnh, hãy thử dành thời gian cho những hoạt động thực tế như đọc sách, tập thể dục hoặc gặp gỡ bạn bè. Đôi khi, việc "offline" một chút lại giúp chúng ta kết nối với cuộc sống thật nhiều hơn.</p>
                         <p style="font-weight: 700; color: var(--text-dark);">Trang chia sẻ: "Có những đêm mình thức lướt mạng đến tận 2 giờ sáng chỉ vì sợ bỏ lỡ một tin tức hay một câu chuyện giật gân của bạn bè. Mình hiểu cảm giác lo lắng, bồn chồn của các bạn. Nhưng chỉ khi tắt máy và hít một hơi thật sâu, mình mới nhận ra cuộc sống của mình nằm ở thế giới thực, chứ không phải qua màn hình điện thoại."</p>
@@ -1775,10 +1895,38 @@
                             </tr>
                         </tbody>
                     </table>
+
+                    <h4 style="margin-top: 25px;">📸 Minh chứng quy trình sáng tạo cùng AI (Trình bày xuôi dòng):</h4>
+                    <div class="report-image-figure">
+                        <img src="5.1.jpg" alt="ChatGPT bước 1">
+                        <p class="report-image-caption">Hình 5.1: ChatGPT phác thảo dàn ý sơ bộ ban đầu cho bài viết blog FOMO</p>
+                    </div>
+                    <div class="report-image-figure">
+                        <img src="5.2.jpg" alt="ChatGPT bước 2">
+                        <p class="report-image-caption">Hình 5.2: Khởi tạo chi tiết bài viết và gọt giũa văn phong gần gũi với Gen Z</p>
+                    </div>
+                    <div class="report-image-figure">
+                        <img src="5.3.jpg" alt="Gemini vẽ tranh">
+                        <p class="report-image-caption">Hình 5.3: Sử dụng Gemini tạo lập hình ảnh phác họa tâm lý cô đơn của giới trẻ</p>
+                    </div>
+                    <div class="report-image-figure">
+                        <img src="5.4.jpg" alt="Canva bước 1">
+                        <p class="report-image-caption">Hình 5.4: Canva AI gợi ý các dải màu u tối và phong cách thiết kế banner tối giản</p>
+                    </div>
+                    <div class="report-image-figure">
+                        <img src="5.5.jpg" alt="Canva bước 2">
+                        <p class="report-image-caption">Hình 5.5: Quá trình tinh chỉnh layout chữ và căn chỉnh khoảng cách chữ thủ công</p>
+                    </div>
+
+                    <h4 style="margin-top: 25px;">🌸 Banner sản phẩm truyền thông hoàn thiện cuối cùng (infor5.jpg):</h4>
+                    <div class="report-image-figure" style="max-width: 600px; margin: 20px auto;">
+                        <img src="infor5.jpg" alt="Ấn phẩm banner hoàn thiện" style="border: 3px solid var(--color-pink-dark); box-shadow: 0 10px 30px rgba(255, 142, 158, 0.25);">
+                        <p class="report-image-caption" style="font-weight: bold; color: var(--color-pink-dark);">Hình 5.6: Banner sản phẩm hoàn thiện cuối cùng mang dấu ấn độc quyền của Trang</p>
+                    </div>
                 `
             },
-            6: {
-                num: "Bài 6 • 6.4 Sử dụng AI có trách nhiệm trong học tập và nghiên cứu",
+            2: {
+                num: "Bài 6 • Sử dụng AI có trách nhiệm trong học tập và nghiên cứu",
                 title: "Sử dụng AI có trách nhiệm trong học tập và nghiên cứu",
                 body: `
                     <div class="meta-card-container">
@@ -1792,9 +1940,11 @@
                         </div>
                     </div>
 
+                    <a class="btn-modal-report" href="https://drive.google.com/file/d/1ZuptTw7Q-ZUnCjTpfz2axQX6_eiViNsW/view?usp=share_link" target="_blank">📄 Xem báo cáo chi tiết</a>
+
                     <h4>📜 Khảo sát quy định chính sách đạo đức học thuật của ULIS-VNU:</h4>
                     <p style="font-size: 13.5px; line-height: 1.8;">
-                        Hiện tại, nhà trường điều chỉnh trực tiếp việc sử dụng AI thông qua <strong>Quy chế Đạo đức học thuật của VNU (Quyết định số 3999/QĐ-ĐHQGHN)</strong> với 3 điểm mấu chốt:<br>
+                        Hiện tại, nhà trường điều chỉnh trực tiếp việc sử dụng AI thông qua <strong>Quy chế Đạo đức học thuật của VNU (Quyết định số 3999/QĐ-ĐHQGHN)</strong> with 3 điểm mấu chốt:<br>
                         1. <strong>Minh bạch & Khai báo:</strong> Không cấm sinh viên dùng AI hỗ trợ tìm ý tưởng, nhưng bắt buộc phải ghi chú rõ ràng sự can thiệp của AI ở danh mục tham khảo.<br>
                         2. <strong>Ranh giới đạo văn (Plagiarism):</strong> Sao chép nguyên văn văn bản do AI sinh ra vào bài tiểu luận mà không qua kiểm chứng, xử lý sẽ bị coi là gian lận học thuật nghiêm trọng.<br>
                         3. <strong>Trách nhiệm giải trình (Accountability):</strong> Sinh viên tự chịu trách nhiệm hoàn toàn cho mọi số liệu sai lệch hoặc lỗi kiến thức do AI "ảo giác" gây ra.
@@ -1879,6 +2029,12 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+
+                    <h4 style="margin-top: 25px;">🎨 Infographic sản phẩm học tập liêm chính (infor6.jpg):</h4>
+                    <div class="report-image-figure" style="max-width: 500px; margin: 20px auto;">
+                        <img src="infor6.jpg" alt="Infographic học tập liêm chính" style="border: 3px solid var(--color-blue-dark); box-shadow: 0 10px 30px rgba(108, 166, 205, 0.25);">
+                        <p class="report-image-caption" style="font-weight: bold; color: var(--color-blue-dark);">Hình 6.1: Infographic minh họa các nguyên tắc sử dụng AI có trách nhiệm học thuật</p>
                     </div>
                 `
             }
